@@ -1,0 +1,156 @@
+:root {
+  --primary: #fff;
+  --secondary: #b6b5b5;
+  --black: #9254C8;
+  --blue: #1e3799;
+  --gray: #E15FED;
+  --gold: #fa983a;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  background: var(--black);
+  transition: 0.6s linear;
+}
+
+.product-card {
+  width: 25rem;
+  background: var(--primary);
+  padding: 2.5rem;
+  position: absolute;
+  border-radius: .3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.product-card h1 {
+  font-size: 1.7rem;  
+  line-height: 1.8rem;  
+}
+
+.product-card p {
+  font-size: 1.25rem;  
+  color: var(--secondary);
+  margin-top: .7rem; /* .6rem */  
+  letter-spacing: 0.05rem;
+}
+
+.product-pic {
+  background-image: url(../images/1.jpg);
+  width: 100%;
+  height: 19rem; /* 15rem */
+  background-size: cover;
+  background-position: center;
+  transition: .6s linear
+}
+
+.product-colors {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.product-colors span {
+  width: .875rem;
+  height: .875rem;
+  margin: 0 .625rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.black {
+  background: var(--black);
+}
+
+.blue {
+  background: var(--blue);
+}
+
+.gray {
+  background: var(--gray);
+}
+
+.gold {
+  background: var(--gold);
+}
+
+.product-colors .active::after {
+  content: "";
+  width: 1.1rem;
+  height: 1.1rem;
+  border: .2rem solid #8888;
+  position: absolute;
+  border-radius: 50%;
+  left: -0.3rem;
+  top: -0.3rem
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  margin: center;
+  font-size: 0.80rem;
+}
+
+.product-price {
+  color: var(--black);
+  font-size: 1.55rem;
+  font-weight: bold;
+}
+
+.product-button {
+  margin-left: auto;
+  color: var(--black);
+  border: .1rem solid;
+  padding: 0.6rem 0.5rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: .2s linear;  
+}
+
+.product-button:hover {
+  transform: scale(1.06)
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 18rem;
+    padding: 1.7rem;    
+  }
+
+  .product-card h1 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;  
+  }
+
+  .product-card p {
+    font-size: .93rem;   
+    margin-top: .8rem; /* .6rem */
+  }
+  
+  .product-pic {  
+    height: 14rem;    
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+  }
+
+  .product-button {    
+    padding: 0.4rem 0.2rem;
+    font-size: 0.60rem;
+
+  }  
+  
+}
